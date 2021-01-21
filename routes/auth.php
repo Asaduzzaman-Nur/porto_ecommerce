@@ -18,7 +18,7 @@ Route::prefix('staff')->group(function () {
 
     Route::post('/register', [RegisteredUserController::class, 'store'])->middleware('guest');
 
-    Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
+    Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('staff.login');
 
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 
